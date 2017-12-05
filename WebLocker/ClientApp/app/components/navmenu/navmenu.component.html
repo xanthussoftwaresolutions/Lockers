@@ -1,0 +1,40 @@
+<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' [routerLink]="['/user']">Locker</a>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <!--<li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/contact']">
+                        <span class='glyphicon glyphicon-home'></span> Contact
+                    </a>
+                </li>-->
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/user']">
+                        <span class='glyphicon glyphicon-user'></span> User
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/device']">
+                        <span class='glyphicon glyphicon-user'></span> Manage
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/login']">
+                        <div *ngIf="LogIn;then content else other_content"></div>
+                        <ng-template #content><span class='glyphicon glyphicon-log-out'></span>Log Out</ng-template>
+                        <ng-template #other_content><span class='glyphicon glyphicon-log-in'></span>Log In</ng-template>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
